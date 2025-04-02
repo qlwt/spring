@@ -1,0 +1,38 @@
+{
+    "name": "@qyu/spring",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/qlwt/spring#readme",
+    "description": "Math for springs",
+    "keywords": ["spring", "math", "physics"],
+    "license": "MIT",
+    "files": [
+        "./build/**/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "github:qlwt/spring"
+    },
+    "scripts": {
+        "build": "run-s build:clear build:rollup",
+        "build:clear": "rimraf ./build",
+        "build:rollup": "rollup -c npm/rollup/rollup.config.js"
+    },
+    "exports": {
+        ".": {
+            "types": "./build/declaration/index.d.ts",
+            "import": "./build/bundle/entry/index.js"
+        }
+    },
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^11.1.6",
+        "npm-run-all": "^4.1.5",
+        "rimraf": "^6.0.1",
+        "rollup": "^4.20.0",
+        "typescript": "^5.8.2",
+        "typescript-transform-paths": "^3.5.5"
+    },
+    "dependencies": {
+        "tslib": "^2.6.3"
+    }
+}
