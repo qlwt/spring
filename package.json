@@ -1,7 +1,8 @@
 {
     "name": "@qyu/spring",
     "type": "module",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "main": "./build/bundle/entry/index.js",
     "homepage": "https://github.com/qlwt/spring#readme",
     "description": "Math for springs",
     "keywords": ["spring", "math", "physics"],
